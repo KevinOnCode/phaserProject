@@ -57,7 +57,7 @@ class board {
 
     getMoveValue(player, card) {
         //take the player position and the card drawn and determine how many spaces need to be moved.
-        let pos = player.location; 
+        let pos = player.location;
         let newPos, breakDelay;
 
         if (player.stuck) {
@@ -94,8 +94,8 @@ class board {
                 newPos = 59;
             }
 
-            if(newPos === 46 || newPos === 86 || newPos === 117){
-                console.log(player.name + " will be stuck next turn");
+            if (newPos === 46 || newPos === 86 || newPos === 117) {
+                //console.log(player.name + " will be stuck next turn");
                 player.stuck = true;
             }
         }

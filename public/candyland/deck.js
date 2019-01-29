@@ -2,7 +2,7 @@
 
 class deck {
 
-    get getNewDeck () {
+    get getNewDeck() {
         let deck = [];
         //A Deck has:
         //  6 singles of each color
@@ -23,7 +23,7 @@ class deck {
         return deck;
     }
 
-    shuffleDeck (array) {
+    shuffleDeck(array) {
         var currentIndex = array.length,
             temporaryValue, randomIndex;
 
@@ -43,12 +43,12 @@ class deck {
         return array;
     }
 
-    drawCard(){
+    drawCard() {
         // take a card off the top of the deck.
         // If there are no cards create a new deck and take the top card from that.
         let ret = this.cards.pop()
-        if(!ret){
-            console.log("All cards have been drawn, reshuffeling");
+        if (!ret) {
+            //console.log("All cards have been drawn, reshuffeling");
             this.cards = this.getNewDeck;
             ret = this.cards.pop();
         }

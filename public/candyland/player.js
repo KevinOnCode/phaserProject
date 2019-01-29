@@ -26,13 +26,18 @@ class player {
         this.playerStuck = isStuck;
     }
 
-    movePlayer(movement){
+    movePlayer(movement) {
         this.location = this.location + movement;
+    }
+
+    playerWin() {
+        this.playerWins += 1;
     }
 
     constructor() {
         this.location = 0;
         this.stuck = false;
+        this.playerWins = 0;
     }
 
 }
