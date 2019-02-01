@@ -19,7 +19,7 @@ class deck {
             }
         }
 
-        deck.push("frostine", "cane", "gumdrop", "lolly", "nutt", "ginger")
+        deck.push("frostine", "cane", "gumdrop", "lolly", "nutt", "ginger");
         return deck;
     }
 
@@ -31,7 +31,7 @@ class deck {
         while (0 !== currentIndex) {
 
             // Pick a remaining element...
-            randomIndex = Math.floor(Math.random() * currentIndex);
+            randomIndex = Math.floor(Math.random() * (currentIndex + 1));
             currentIndex -= 1;
 
             // And swap it with the current element.
@@ -46,10 +46,11 @@ class deck {
     drawCard() {
         // take a card off the top of the deck.
         // If there are no cards create a new deck and take the top card from that.
-        let ret = this.cards.pop()
+        let ret = this.cards.pop();
         if (!ret) {
             //console.log("All cards have been drawn, reshuffeling");
             this.cards = this.getNewDeck;
+            this.cards = this.shuffleDeck(this.cards);
             ret = this.cards.pop();
         }
         return ret;
